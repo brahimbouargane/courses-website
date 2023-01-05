@@ -12,6 +12,7 @@ import gatsby from '../images/gatsby-icon.png'
 import git from '../images/git.png'
 import card1 from '../images/card1.png'
 import Card from "../components/Card"
+import Section from "../components/Section"
 
 
 
@@ -133,59 +134,17 @@ const IndexPage = () => (
             />
         </div>
       </div>
+      
+      <Section 
+      logo={react}
+      title="Learn React"
+      text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vulputate, ante lobortis pretium pulvinar, dolor elit imperdiet nisi, ac venenatis massa ex lacinia augue. Etiam et sapien placerat, tincidunt felis et, fermentum libero. Curabitur elit dolor, eleifend non quam in, commodo sagittis ex. "
+      />    
     </div>
-    {/* <div className={styles.textCenter}>
-      <StaticImage
-        src="../images/example.png"
-        loading="eager"
-        width={64}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt=""
-        style={{ marginBottom: `var(--space-3)` }}
-      />
-      <h1>
-        Welcome to <b>Gatsby!</b>
-      </h1>
-      <p className={styles.intro}>
-        <b>Example pages:</b>{" "}
-        {samplePageLinks.map((link, i) => (
-          <React.Fragment key={link.url}>
-            <Link to={link.url}>{link.text}</Link>
-            {i !== samplePageLinks.length - 1 && <> · </>}
-          </React.Fragment>
-        ))}
-        <br />
-        Edit <code>src/pages/index.js</code> to update this page.
-      </p>
-    </div>
-    <ul className={styles.list}>
-      {links.map(link => (
-        <li key={link.url} className={styles.listItem}>
-          <a
-            className={styles.listItemLink}
-            href={`${link.url}${utmParameters}`}
-          >
-            {link.text} ↗
-          </a>
-          <p className={styles.listItemDescription}>{link.description}</p>
-        </li>
-      ))}
-    </ul>
-    {moreLinks.map((link, i) => (
-      <React.Fragment key={link.url}>
-        <a href={`${link.url}${utmParameters}`}>{link.text}</a>
-        {i !== moreLinks.length - 1 && <> · </>}
-      </React.Fragment>
-    ))} */}
   </Layout>
 )
 
-/**
- * Head export to define metadata for the page
- *
- * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
- */
+
 export const Head = () => <Seo title="bro" />
 
 export default IndexPage

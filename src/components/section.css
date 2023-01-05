@@ -1,0 +1,43 @@
+.section-group{
+    background: url('../images/section.jpg');
+    background-size: cover;
+    display: grid;
+    margin: 20px;
+    border-radius: 20px;
+}
+.section-logo{
+    align-self: flex-end;
+    width: 190px;
+    margin: 50px auto;
+}
+.section-des{
+    display: grid;
+    grid-template-columns: 300px auto;
+    margin: 0 50px 50px 50px;
+    grid-gap: 20px;
+    
+
+}
+.section-des h3{
+    color: #fff;
+    font-size: 60px;
+    margin: 0;
+    line-height: 1.2;
+}
+.section-des p{
+    color: #fff;
+}
+
+
+@media (max-width: 720px){
+    .section-des{
+        grid-template-columns: 1fr;
+    }
+    .section-logo{
+        width: 150px;
+    }
+    .section-des h3{
+        font-size: 45px;
+    }
+
+}
