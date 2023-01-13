@@ -1,0 +1,27 @@
+
+.cell-group{
+    display: grid;
+    grid-template-columns: 60px auto;
+    grid-gap: 25px;
+    align-items: center;
+    margin: 10px;
+}
+.cell-image{
+    padding: 10px;
+    width: 60px;
+    height: 60px;
+    background: rgb(63,94,251);
+    background: radial-gradient(circle, rgb(17, 50, 214) 0%, rgb(245, 153, 171) 100%);
+    border-radius: 10px;
+    background-size: 60px;
+}
+.cell-image img{
+    width: 60px;
+    height: 60px;
+    
+}
+.cell-title{
+    font-size: 24px;
+    border-bottom: 1px solid rgba(0, 0, 0,0.1);
+    padding: 30px 0;
+}

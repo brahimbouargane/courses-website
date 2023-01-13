@@ -11,9 +11,16 @@ import javascript from '../images/javascript.png'
 import gatsby from '../images/gatsby-icon.png'
 import git from '../images/git.png'
 import card1 from '../images/card1.png'
+import card2 from '../images/card2.png'
+import card3 from '../images/card3.png'
+import card4 from '../images/card4.png'
+import card5 from '../images/card5.png'
 import Card from "../components/Card"
 import Section from "../components/Section"
+import Cells from "../components/Cells"
+import staticdata from '../../staticdata.json'
 
+ 
 
 
 
@@ -83,7 +90,8 @@ const moreLinks = [
 
 const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
 
-const IndexPage = () => (
+const IndexPage = () =>{
+return(
   <Layout>
     <div>
       <div className="hero">
@@ -100,7 +108,7 @@ const IndexPage = () => (
             <img src={gatsby} alt="gatsby" width="50"/>
           </div>
           <svg width="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-          <path fill="#fff" fill-opacity="1" d="M0,96L60,106.7C120,117,240,139,360,138.7C480,139,600,117,720,112C840,107,960,117,1080,138.7C1200,160,1320,192,1380,208L1440,224L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+          <path fill="#fff" fillOpacity="1" d="M0,96L60,106.7C120,117,240,139,360,138.7C480,139,600,117,720,112C840,107,960,117,1080,138.7C1200,160,1320,192,1380,208L1440,224L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
           </svg>
         </div>
       </div>
@@ -115,22 +123,22 @@ const IndexPage = () => (
             <Card
             title="React for Beginers"
             text="12 section"
-            image={card1}
+            image={card2}
             />
             <Card
             title="React for Beginers"
             text="12 section"
-            image={card1}
+            image={card3}
             />
             <Card
             title="React for Beginers"
             text="12 section"
-            image={card1}
+            image={card4}
             />
             <Card
             title="React for Beginers"
             text="12 section"
-            image={card1}
+            image={card5}
             />
         </div>
       </div>
@@ -139,10 +147,22 @@ const IndexPage = () => (
       logo={react}
       title="Learn React"
       text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vulputate, ante lobortis pretium pulvinar, dolor elit imperdiet nisi, ac venenatis massa ex lacinia augue. Etiam et sapien placerat, tincidunt felis et, fermentum libero. Curabitur elit dolor, eleifend non quam in, commodo sagittis ex. "
-      />    
+      />
+      <div>
+      <p className='section-title'>12 Section - 6 hours</p>
+        <div className='section-cell-group'>
+            {staticdata.cells.map(cell => (
+              <Cells
+              title={cell.title}
+              image={cell.image}
+              />
+            ))}
+        </div>  
+      </div>  
     </div>
   </Layout>
-)
+ )
+}
 
 
 export const Head = () => <Seo title="bro" />
